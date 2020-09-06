@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="twitter:title" content="Bitcoin.com Link Testbed">
+  <meta name="twitter:image" content="https://developer.bitcoin.com/facebook.png">
+  <meta name="twitter:description" content="A simple testbed for the Bitcoin.com Link.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/bitcoincom-link@0.1.10/lib/bitcoincom-link.min.js"></script>
+</head>
+
+<body>
+  <a href="https://github.com/bitcoin-com/bitcoincom-link" target="_blank">
+    <h1>Bitcoin.com Link testbed</h1>
+  </a>
+  <div class="content">
+    <div class="functions">
+      <h3>Available functions</h3>
+      <div class="scroll-container">
+
+        <div class="function-container">
+          <h5 class="title">Get address of your wallet</h5>
+          <!-- <p>Return an address for a specified protocol.</p> -->
+          <br />
+          <div class="mb-3" style="display: none;">
+            <div>Protocol:</div>
+            <select id="getAddressProtocol" class='mb-3'>
+              <option value="BCH">BCH</option>
+              <!-- <option value="SLP">SLP</option> -->
+              <!-- <option value="BTC">BTC</option> -->
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="getAddress()">Get address</button>
+        </div>
+
+        <div class="function-container">
+          <h5 class="title">Send Money ₹ 0.25</h5>
+          <!-- <p>Allows for a simple send of assets from user to specified address. The use case is where another
+            application would like to request payment from the user wallet directly, without alerting any 3rd party
+            server (merchant server).</p> -->
+          <br />
+          <div class="mb-3">
+            <div>To address:</div>
+            <input id='sendAssetsToAddress' type="text" value="" placeholder="Reciever's Address" />
+          </div>
+          <div class="mb-5" style="display: none;">
+            <div>Protocol:</div>
+            <select id="sendAssetsProtocol">
+              <option value="BCH">BCH</option>
+              <!-- <option value="SLP">SLP</option>
+              <option value="BTC">BTC</option> -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <div>Value:</div>
+            <input id='sendAssetsValue' type="text" value="" placeholder="0.00001 Recommended for Testing" />
+          </div>
+          <!-- <div class="mb-3">
+            <div>Asset ID (currently only used for SLP tokenId):</div>
+            <input id='sendAssetsAssetId' type="text" value="" />
+          </div> -->
+          <div class="mb-3" style="display: none;">
+            <div>Op Return:</div>
+            <input id='sendAssetsOpReturn' type="text"
+              value="[&quot;0x6d02&quot;, &quot;Hello Bitcoin.com Link&quot;]" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="sendAssets()">Send</button>
+        </div>
+
+        <!-- <div class="function-container">
+          <h5 class="title">payInvoice</h5>
+          <p>Provides an interface for an application to request payment of a BIP70 invoice to a users wallet.</p>
+          <div class="mb-3">
+            <div>Payment URL:</div>
+            <input id='payInvoiceUrl' type="text" value="" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="payInvoice()">Pay</button>
+        </div>
+
+        <div class="function-container">
+          <h5 class="title">createToken</h5>
+          <p>Create a token with initial parameters for sending the initial tokens and minting permissions.</p>
+
+          <div class="mb-3">
+            <div>Token Name:</div>
+            <input id='createTokenName' type="text" value="" />
+          </div>
+
+          <div class="mb-3">
+            <div>Token Symbol:</div>
+            <input id='createTokenSymbol' type="text" value="" />
+          </div>
+
+          <div class="mb-3">
+            <div>Token Decimals:</div>
+            <input id='createTokenDecimals' type="number" value="" />
+          </div>
+
+          <div class="mb-3">
+            <div>Initial Token Supply:</div>
+            <input id='createTokenInitialSupply' type="number" value="" />
+          </div>
+
+          <div class="mb-3">
+            <div>Initial Supply Receiver Address:</div>
+            <input id='createTokenReceiverAddress' type="text" value="" />
+          </div>
+
+          <div class="mb-3">
+            <div>Mint Baton Address (optional):</div>
+            <input id='createTokenBatonReceiverAddress' type="text" value="" />
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="createToken()">Create</button>
+        </div>-->
+      </div>
+    </div>
+
+    <div class="output">
+      <h3>Output</h3>
+      <div class="scroll-container">
+        <div id="loading">
+          <div style="width:100%;height:100%" class="lds-pacman">
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div id="result"></div>
+        <div id="error"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>

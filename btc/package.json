@@ -1,0 +1,37 @@
+{
+  "name": "bitcoincom-link",
+  "version": "0.1.10-ping02",
+  "description": "",
+  "main": "./lib/bitcoincom-link.min.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode development",
+    "build-dist": "webpack --mode production --env.DISTRIBUTION=true",
+    "dist": "yarn build-dist",
+    "fix-bitcore": "sed -i '' 's/i.versionGuard(t._bitcoreCash),//g' lib/bitcoincom-link.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitcoin-com/bitcoincom-link.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/bitcoin-com/bitcoincom-link/issues"
+  },
+  "homepage": "https://developer.bitcoin.com/link",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.3",
+    "@types/node": "^13.7.1",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.20.1",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.0",
+    "page-metadata-parser": "^1.1.4"
+  }
+}
