@@ -2,7 +2,7 @@
 Block breaking game with BCH payments, pay to play arcade game in block break style. trying link library to accept bch or slp to play. My first time building anything with BCH.
 
 
-[Imgur](https://imgur.com/IHOgaUq)
+![Imgur](https://imgur.com/IHOgaUq)
 
 
 ##
@@ -39,6 +39,6 @@ Original game assets and gameplay were purchased from https://codecanyon.net/ite
 https://discord.com/channels/735732075776442369/751630113346420746/751813303763730435
 
 
-[Imgur](https://imgur.com/xEeH164)
+![Imgur](https://imgur.com/xEeH164)
 
 
