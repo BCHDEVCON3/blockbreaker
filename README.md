@@ -41,7 +41,7 @@ Original game assets and gameplay were purchased from https://codecanyon.net/ite
 
 https://discord.com/channels/735732075776442369/751630113346420746/751813303763730435
 
+![gif](https://i.imgur.com/sG4LCFf.gif)
 
-![image](https://imgur.com/xEeH164.png)
 
 
